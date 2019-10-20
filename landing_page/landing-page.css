@@ -1,0 +1,266 @@
+/*
+header, section, footer, aside, nav, main, article, figure {
+  display: block;
+}
+*/
+
+body, html {
+  height: 100%;
+  margin: 0;
+  /* overflow-x: hidden; */
+  overflow-x: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900; /* Black */
+    color: #4F4D53;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900; /* Black */
+    color: #E8BE02;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900; /* Black */
+    color: #E8BE02;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* Regular */
+    color: #FFFFFF; /* original spec. */
+}
+
+/* 768 px or larger: desktop */
+/* 600 px or larger: tablet */
+@media screen and (min-width: 768px){ 
+    /* 100px is just too big for small screens...it overflows the body... */
+    h1{
+	      font-size: 100px; /* As per the spec. */
+	}
+
+    /* 64px is just too big for small screens...it overflows the body... */
+    h2 {
+        font-size: 64px;  /* As per the spec. */
+    }
+}
+
+
+h3 {
+    font-size: 20px; /* As per the spec. */
+}
+
+h4 {
+    font-size: 14px; /* As per the spec. */
+}
+
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 20px; 
+    color: #4F4D53;
+}
+
+
+header {
+    background-color: #4F4D53; 
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 4rem; 
+    width: 100%;
+    height: 48px;
+}
+
+.header-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+img.logo {
+    height: 1rem;
+}
+
+input.search {
+    background-image: url('media/ic_search.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 1.25rem;
+    padding-left: 16px;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 40vw;
+}
+
+img.hero {
+    width: 100%;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap; 
+}
+
+.hero-pix {
+	 text-align: center;
+	 position: absolute;
+	 top: 90%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 width: 50%;
+	 display: flex;
+	 flex-wrap: nowrap; /* display the peeps vertically for smaller screens...? */
+	 justify-content: space-around;
+}
+
+img.peep {
+    border-radius: 50%;
+    width: 20vw;
+    min-width: 100px;
+    padding: 1rem;
+}
+
+img.peep-small {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    padding: 1rem;
+}
+
+.below-hero{
+    margin: 2vw;
+    height: 10vw;
+    width: 100vw;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #4F4D53; 
+    border-top: 12px solid #E8BE02; /* as per the spec */
+    width: 100%;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+
+@media screen and (min-width: 600px){
+    /* Throw away the 320px footer height requirement for smaller screens... */ 
+    footer {
+	    height: 320px; /* as per spec */
+    }
+}
+
+.how {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+
+.who-are-you-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap; /* display the peeps vertically for smaller screens...? */
+}
+
+.who-are-you-inner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 1em 0 1rem;
+}
+
+.who-are-you-col-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.who-are-you-container h3, p, div { 
+    padding: 0;
+    margin: 0;
+}
+
+
+article {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 50vw;
+}
+
+
+footer {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+footer > section {
+    padding: 1em;
+}
+
+
+.footer-section-row {
+    display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap; /* display these footer sections vertically for smaller screens so as not to overflow the body... */
+}
+
+.footer-section {
+    padding: 2rem; 
+}
+
+
+.footer-section h3, h4 {
+    margin: 0;
+}
+    
+.footer-section h3 {
+   padding-bottom: 1rem;
+}
+
+.footer-section h4.last {
+   padding-bottom: 1rem;
+}
+
+
